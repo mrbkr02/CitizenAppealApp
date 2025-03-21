@@ -1,8 +1,12 @@
 import { Routes } from '@angular/router';
-import { ApplicationHomeComponent } from './components/application-home/application-home.component';
-import { ApplicationInfoComponent } from './components/application-info/application-info.component';
+import { ApplicationActionsComponent } from './components/application-actions/application-actions.component';
+import { SearchApplicationComponent } from './components/search-application/search-application.component';
+import { UpdateApplicationComponent } from './components/update-application/update-application.component';
+import { InsertApplicationComponent } from './components/insert-application/insert-application.component';
 
 export const routes: Routes = [
-  { path: '', component: ApplicationHomeComponent },
-  { path: 'application-info/:id', component: ApplicationInfoComponent }, // Route with parameter(with id)
+  { path: '', component: ApplicationActionsComponent }, // Homepage with action buttons
+  { path: 'search', component: SearchApplicationComponent }, // Search Application
+  { path: 'update', component: UpdateApplicationComponent }, // Update Application
+  { path: 'insert', component: InsertApplicationComponent }, // Insert New Application
 ];
