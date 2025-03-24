@@ -1,1 +1,7 @@
-<p>search-application works!</p>
+<div class="search-container">
+    <h2>Search Application</h2>
+    <input type="text" [(ngModel)]="applicationId" placeholder="Enter Application ID" />
+    <button (click)="searchApplication()">Search</button>
+    <p *ngIf="searchResult">{{ searchResult }}</p>
+  </div>
+  
