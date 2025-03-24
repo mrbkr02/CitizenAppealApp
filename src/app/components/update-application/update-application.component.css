@@ -1,0 +1,45 @@
+.update-app-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-app-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.update-app-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-app-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.update-app-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.update-app-form button {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.update-app-form button:hover {
+  background: #218838;
+}

@@ -1,6 +1,6 @@
-.insert-app-container {
+.check-update-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 40px auto;
     padding: 20px;
     background: #f9f9f9;
@@ -8,39 +8,35 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .insert-app-container h2 {
+  .check-update-container h2 {
     text-align: center;
     color: #333;
   }
   
-  .insert-app-form {
+  .search-section {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
   }
   
-  .insert-app-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .insert-app-form input {
+  .search-section input {
+    flex: 1;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  .insert-app-form button {
-    background: #038ea7;
-    color: white;
+  .search-section button {
     padding: 10px;
+    background: #007bff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
   }
   
-  .insert-app-form button:hover {
-    background: #c40d8d;
+  .search-section button:hover {
+    background: #0056b3;
   }
   

@@ -1,1 +1,31 @@
-<p>update-application works!</p>
+<div class="update-app-container">
+  <h2>Update Application (ID: {{ applicationId }})</h2>
+  <form (ngSubmit)="handleUpdate()" class="update-app-form">
+
+    <label>Citizen ID:</label>
+    <input type="number" [(ngModel)]="formData.citizenId" name="citizenId" required />
+
+    <label>Service Name:</label>
+    <input type="text" [(ngModel)]="formData.serviceName" name="serviceName" required />
+
+    <label>Service ID:</label>
+    <input type="number" [(ngModel)]="formData.serviceId" name="serviceId" required />
+
+    <label>Max Delivery Duration (Days):</label>
+    <input type="number" [(ngModel)]="formData.maxDeliveryDuration" name="maxDeliveryDuration" required />
+
+    <label>Current Status:</label>
+    <input type="text" [(ngModel)]="formData.currentStatus" name="currentStatus" required />
+
+    <label>Created On:</label>
+    <input type="datetime-local" [(ngModel)]="formData.createdOn" name="createdOn" required />
+
+    <label>Stage ID:</label>
+    <input type="number" [(ngModel)]="formData.stageId" name="stageId" required />
+
+    <label>Completion Time:</label>
+    <input type="datetime-local" [(ngModel)]="formData.completionTime" name="completionTime" required />
+
+    <button type="submit">Update Application</button>
+  </form>
+</div>
