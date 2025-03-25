@@ -1,7 +1,13 @@
-<div class="search-container">
-    <h2>Search Application</h2>
-    <input type="text" [(ngModel)]="applicationId" placeholder="Enter Application ID" />
-    <button (click)="searchApplication()">Search</button>
-    <p *ngIf="searchResult">{{ searchResult }}</p>
-  </div>
-  
+<div class="search-wrapper">
+  <mat-card>
+    <mat-card-title class="title">Search Application</mat-card-title>
+    <mat-card-content >
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Enter Application ID</mat-label>
+        <input matInput type="text" [(ngModel)]="applicationId" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="searchApplication()">Search</button>
+      <p *ngIf="searchResult" class="result">{{ searchResult }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

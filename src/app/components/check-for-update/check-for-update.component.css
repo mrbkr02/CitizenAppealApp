@@ -1,42 +1,57 @@
-.check-update-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .check-update-container h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .search-section {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .search-section input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .search-section button {
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .search-section button:hover {
-    background: #0056b3;
-  }
-  
+/* Center the component */
+.check-update-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(213, 223, 231);
+}
+
+/* Material Card Styling */
+mat-card {
+  padding: 30px;
+  background: #a4cee6;
+  border-radius: 12px;
+  text-align: center;
+  width: 500px;
+  min-height: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #37474f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 15px;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+}
+
+/* Force White Background for Input */
+::ng-deep .input-field .mat-input-element {
+  background: white !important;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+}

@@ -1,6 +1,18 @@
-<div class="container">
-    <h2>Application Actions</h2>
-    <button (click)="navigate('search')">Search Application</button>
-    <button (click)="navigate('update')">Check to Update Application</button>
-    <button (click)="navigate('insert')">Insert Application</button>
-  </div>
+<div class="container mat-elevation-z3">
+  <mat-card>
+    <mat-card-title class="title">Application Actions</mat-card-title>
+    <mat-card-content>
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="navigate('search')">
+          Search Application
+        </button>
+        <button mat-raised-button color="accent" (click)="navigate('update')">
+          Check to Update Application
+        </button>
+        <button mat-raised-button color="warn" (click)="navigate('insert')">
+          Insert Application
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

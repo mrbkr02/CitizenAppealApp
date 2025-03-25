@@ -1,35 +1,56 @@
-<div class="insert-app-container">
-    <h2>Insert New Application</h2>
-    <form (ngSubmit)="handleSubmit()" class="insert-app-form">
-      
-      <label>Application ID:</label>
-      <input type="number" [(ngModel)]="formData.applicationId" name="applicationId" required />
-  
-      <label>Citizen ID:</label>
-      <input type="number" [(ngModel)]="formData.citizenId" name="citizenId" required />
-  
-      <label>Service Name:</label>
-      <input type="text" [(ngModel)]="formData.serviceName" name="serviceName" required />
-  
-      <label>Service ID:</label>
-      <input type="number" [(ngModel)]="formData.serviceId" name="serviceId" required />
-  
-      <label>Max Delivery Duration (Days):</label>
-      <input type="number" [(ngModel)]="formData.maxDeliveryDuration" name="maxDeliveryDuration" required />
-  
-      <label>Current Status:</label>
-      <input type="text" [(ngModel)]="formData.currentStatus" name="currentStatus" required />
-  
-      <label>Created On:</label>
-      <input type="datetime-local" [(ngModel)]="formData.createdOn" name="createdOn" required />
-  
-      <label>Stage ID:</label>
-      <input type="number" [(ngModel)]="formData.stageId" name="stageId" required />
-  
-      <label>Completion Time:</label>
-      <input type="datetime-local" [(ngModel)]="formData.completionTime" name="completionTime" required />
-  
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-  
+<div class="insert-app-wrapper">
+  <mat-card>
+    <mat-card-title class="title">Insert New Application</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="handleSubmit()" class="insert-app-form">
+        
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Application ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.applicationId" name="applicationId" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Citizen ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.citizenId" name="citizenId" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Service Name</mat-label>
+          <input matInput type="text" [(ngModel)]="formData.serviceName" name="serviceName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Service ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.serviceId" name="serviceId" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Max Delivery Duration (Days)</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.maxDeliveryDuration" name="maxDeliveryDuration" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Current Status</mat-label>
+          <input matInput type="text" [(ngModel)]="formData.currentStatus" name="currentStatus" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Created On</mat-label>
+          <input matInput type="datetime-local" [(ngModel)]="formData.createdOn" name="createdOn" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Stage ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.stageId" name="stageId" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Completion Time</mat-label>
+          <input matInput type="datetime-local" [(ngModel)]="formData.completionTime" name="completionTime" required />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

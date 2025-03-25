@@ -1,31 +1,51 @@
-<div class="update-app-container">
-  <h2>Update Application (ID: {{ applicationId }})</h2>
-  <form (ngSubmit)="handleUpdate()" class="update-app-form">
+<div class="update-app-wrapper">
+  <mat-card>
+    <mat-card-title class="title">Update Application (ID: {{ applicationId }})</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="handleUpdate()" class="update-app-form">
+        
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Citizen ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.citizenId" name="citizenId" required />
+        </mat-form-field>
 
-    <label>Citizen ID:</label>
-    <input type="number" [(ngModel)]="formData.citizenId" name="citizenId" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Service Name</mat-label>
+          <input matInput type="text" [(ngModel)]="formData.serviceName" name="serviceName" required />
+        </mat-form-field>
 
-    <label>Service Name:</label>
-    <input type="text" [(ngModel)]="formData.serviceName" name="serviceName" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Service ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.serviceId" name="serviceId" required />
+        </mat-form-field>
 
-    <label>Service ID:</label>
-    <input type="number" [(ngModel)]="formData.serviceId" name="serviceId" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Max Delivery Duration (Days)</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.maxDeliveryDuration" name="maxDeliveryDuration" required />
+        </mat-form-field>
 
-    <label>Max Delivery Duration (Days):</label>
-    <input type="number" [(ngModel)]="formData.maxDeliveryDuration" name="maxDeliveryDuration" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Current Status</mat-label>
+          <input matInput type="text" [(ngModel)]="formData.currentStatus" name="currentStatus" required />
+        </mat-form-field>
 
-    <label>Current Status:</label>
-    <input type="text" [(ngModel)]="formData.currentStatus" name="currentStatus" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Created On</mat-label>
+          <input matInput type="datetime-local" [(ngModel)]="formData.createdOn" name="createdOn" required />
+        </mat-form-field>
 
-    <label>Created On:</label>
-    <input type="datetime-local" [(ngModel)]="formData.createdOn" name="createdOn" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Stage ID</mat-label>
+          <input matInput type="number" [(ngModel)]="formData.stageId" name="stageId" required />
+        </mat-form-field>
 
-    <label>Stage ID:</label>
-    <input type="number" [(ngModel)]="formData.stageId" name="stageId" required />
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Completion Time</mat-label>
+          <input matInput type="datetime-local" [(ngModel)]="formData.completionTime" name="completionTime" required />
+        </mat-form-field>
 
-    <label>Completion Time:</label>
-    <input type="datetime-local" [(ngModel)]="formData.completionTime" name="completionTime" required />
-
-    <button type="submit">Update Application</button>
-  </form>
+        <button mat-raised-button color="primary" type="submit">Update Application</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>
