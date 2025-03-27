@@ -1,0 +1,39 @@
+<div class="sidebar">
+    <div class="logo_content">
+      <div class="logo">
+        <div class="logo_name">Citizen Tracker</div>
+      </div>
+    </div>
+  
+    <ul class="nav_list">
+      <li>
+        <a routerLink="/user" routerLinkActive="active">
+          <i class="bx bx-user"></i>
+          <span class="links_name">User</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/complete-profile" routerLinkActive="active">
+          <i class="bx bx-edit"></i>
+          <span class="links_name">Complete Your Profile</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/track-application" routerLinkActive="active">
+          <i class="bx bx-file-find"></i>
+          <span class="links_name">Track Application</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/reset-password" routerLinkActive="active">
+          <i class="bx bx-lock"></i>
+          <span class="links_name">Reset Password</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="home_content">
+    <router-outlet></router-outlet>
+  </div>
+  
