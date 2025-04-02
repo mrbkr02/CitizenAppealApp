@@ -1,0 +1,40 @@
+<div class="track-container">
+    <h2>Track Your Application</h2>
+
+    <div class="stepper">
+      <div class="step" [class.completed]="currentStep >= 1">
+        <div class="circle">1</div>
+        <div class="line"></div>
+        <div class="content">
+          <p class="status">Application Submitted</p>
+          <p class="summary">Your application has been successfully submitted and is awaiting review.</p>
+        </div>
+      </div>
+
+      <div class="step" [class.completed]="currentStep >= 2">
+        <div class="circle">2</div>
+        <div class="line"></div>
+        <div class="content">
+          <p class="status">Under Review</p>
+          <p class="summary">Your application is currently being reviewed by the concerned authorities.</p>
+        </div>
+      </div>
+
+      <div class="step" [class.completed]="currentStep >= 3">
+        <div class="circle">3</div>
+        <div class="line"></div>
+        <div class="content">
+          <p class="status">Approved / Rejected</p>
+          <p class="summary">You will receive an update soon regarding the approval or rejection of your application.</p>
+        </div>
+      </div>
+
+      <div class="step" [class.completed]="currentStep >= 4">
+        <div class="circle">4</div>
+        <div class="content">
+          <p class="status">Completed</p>
+          <p class="summary">The application process has been completed. You can download your confirmation.</p>
+        </div>
+      </div>
+    </div>
+</div>

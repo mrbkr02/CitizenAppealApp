@@ -32,13 +32,13 @@ export class SearchApplicationComponent {
       );
 
       this.searchResult = exists
-        ? `✅ Application with ID ${this.applicationId} exists.`
-        : `❌ Application with ID ${this.applicationId} not found.`;
+        ? `Application with ID ${this.applicationId} exists.`
+        : `Application with ID ${this.applicationId} not found.`;
 
     } catch (error) {
       if (error instanceof HttpErrorResponse) {
         if (error.status === 404) {
-          this.searchResult = `❌ Application with ID ${this.applicationId} not found.`;
+          this.searchResult = `Application with ID ${this.applicationId} not found.`;
         } else {
           this.searchResult = `⚠️ Error: ${error.statusText} (Status: ${error.status})`;
         }

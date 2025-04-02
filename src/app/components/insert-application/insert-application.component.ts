@@ -27,9 +27,9 @@ export class InsertApplicationComponent {
     serviceId: null,
     maxDeliveryDuration: null,
     currentStatus: '',
-    createdOn: new Date().toISOString().slice(0, 16), // Default current datetime
+    createdOn: new Date().toISOString().slice(0, 16),
     stageId: null,
-    completionTime: new Date().toISOString().slice(0, 16), // Default current datetime
+    completionTime: new Date().toISOString().slice(0, 16),
   };
 
   handleSubmit() {

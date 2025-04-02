@@ -17,8 +17,8 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './check-for-update.component.css',
 })
 export class CheckForUpdateComponent {
-  private router = inject(Router); // Inject Router
-  private http = inject(HttpClient); // Inject HttpClient
+  private router = inject(Router); 
+  private http = inject(HttpClient);
   applicationId: string = '';
 
   async checkApplication() {
@@ -28,7 +28,7 @@ export class CheckForUpdateComponent {
     }
 
     try {
-      // Call backend API to check if application exists
+      //backend API to check if application exists
       const exists = await firstValueFrom(
         this.http.get<boolean>(`http://localhost:5169/api/applicationforms/exists/${this.applicationId}`)
       );
@@ -41,7 +41,7 @@ export class CheckForUpdateComponent {
         alert('Application ID is not correct. Please enter again.');
       }
     } catch (error) {
-      // console.error('Error checking application:', error);
+      console.error('Error checking application:', error);
       // alert('Error checking application. Please try again.');
     }
   }

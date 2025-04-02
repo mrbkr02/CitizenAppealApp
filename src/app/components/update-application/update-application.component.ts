@@ -57,7 +57,7 @@ export class UpdateApplicationComponent {
         this.http.put(`http://localhost:5169/api/applicationforms/${this.applicationId}`, this.formData)
       );
       alert('Your form has been updated successfully.');
-      this.router.navigate(['/']); // Redirect to homepage
+      this.router.navigate(['/']); // Redirect to homepage submit ke baad
     } catch (error) {
       console.error('Error updating application:', error);
       alert('Error updating application.');

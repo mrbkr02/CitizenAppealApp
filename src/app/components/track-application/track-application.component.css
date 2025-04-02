@@ -1,0 +1,81 @@
+.step.completed .line {
+    background-color: #4caf50;
+}
+.track-container {
+    padding: 30px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 50px;
+  }
+  
+  .step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 500px;
+    min-height: 60px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: gray;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .line {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: gray;
+    left: 18px;
+    top: 40px; 
+    z-index: 1;
+  }
+
+  .step:last-child .line {
+    display: none;
+  }
+
+  .content {
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  .status {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .summary {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  .completed .circle {
+    background-color: #4caf50;
+  }
+  
+  

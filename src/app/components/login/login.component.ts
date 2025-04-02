@@ -36,7 +36,7 @@ export class LoginComponent {
   handleLogin() {
     if (this.loginForm.valid) {
       console.log('Login attempted with:', this.loginForm.value);
-      // Backend integration will be added later
+      // idhar Backend integration will be added later
     }
   }
 
