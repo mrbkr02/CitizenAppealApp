@@ -1,0 +1,25 @@
+<div class="otp-container">
+    <h2>OTP Verification</h2>
+
+    <div class="mobile-input">
+      <select [(ngModel)]="selectedCountryCode">
+        <option *ngFor="let code of countryCodes" [value]="code">{{ code }}</option>
+      </select>
+      <input type="tel" [(ngModel)]="mobileNumber" placeholder="Enter mobile number" />
+    </div>
+  
+    <button *ngIf="!otpSent" (click)="sendOtp()">Send OTP</button>
+
+    <div *ngIf="otpSent" class="otp-input">
+      <input type="text" maxlength="1" [(ngModel)]="otp[0]" (input)="focusNext($event, 1)" />
+      <input type="text" maxlength="1" [(ngModel)]="otp[1]" (input)="focusNext($event, 2)" />
+      <input type="text" maxlength="1" [(ngModel)]="otp[2]" (input)="focusNext($event, 3)" />
+      <input type="text" maxlength="1" [(ngModel)]="otp[3]" (input)="focusNext($event, 4)" />
+      <input type="text" maxlength="1" [(ngModel)]="otp[4]" (input)="focusNext($event, 5)" />
+      <input type="text" maxlength="1" [(ngModel)]="otp[5]" />
+    </div>
+  
+    <button *ngIf="otpSent" (click)="verifyOtp()">Verify OTP</button>
+    <button *ngIf="otpSent" class="resend" (click)="resendOtp()">Resend OTP</button>
+  </div>
+  

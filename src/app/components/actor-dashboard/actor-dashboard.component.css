@@ -1,0 +1,52 @@
+.actor-dashboard-card {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: gray;
+  }
+  
+  .pending-appeals-count-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .chip {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .no-appeals {
+    margin-top: 10px;
+  }
+  
+
+  .table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .mat-card-no-appeals {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .mat-elevation-z4 {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  

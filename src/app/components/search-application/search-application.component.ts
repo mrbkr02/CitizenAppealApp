@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
@@ -11,12 +12,21 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-search-application',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule
+  ],
   templateUrl: './search-application.component.html',
   styleUrl: './search-application.component.css',
 })
 export class SearchApplicationComponent {
   private http = inject(HttpClient);
+  private router = inject(Router);
+  
   applicationId: string = '';
   searchResult: string = '';
 
@@ -31,10 +41,11 @@ export class SearchApplicationComponent {
         this.http.get<boolean>(`http://localhost:5169/api/applicationforms/exists/${this.applicationId}`)
       );
 
-      this.searchResult = exists
-        ? `Application with ID ${this.applicationId} exists.`
-        : `Application with ID ${this.applicationId} not found.`;
-
+      if (exists) {
+        this.router.navigate(['/reapply', this.applicationId]);
+      } else {
+        this.searchResult = `Application with ID ${this.applicationId} not found.`;
+      }
     } catch (error) {
       if (error instanceof HttpErrorResponse) {
         if (error.status === 404) {

@@ -1,0 +1,33 @@
+<div class="reapply-container">
+  <h2 class="title">Reapply for Application</h2>
+
+  <mat-card class="info-card">
+    <p><strong>Application ID:</strong> {{ applicationDetails.applicationId }}</p>
+    <p><strong>Service Name:</strong> {{ applicationDetails.serviceName }}</p>
+    <p><strong>Date of Apply:</strong> {{ applicationDetails.createdOn | date: 'mediumDate' }}</p>
+    <p><strong>Citizen ID:</strong> {{ applicationDetails.citizenId }}</p>
+    <p><strong>Status:</strong> {{ applicationDetails.currentStatus }}</p>
+  </mat-card>
+
+  <mat-card class="form-card">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Comment</mat-label>
+      <textarea matInput [(ngModel)]="comment" rows="4" placeholder="Write your comment..."></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Reason for Reapplying</mat-label>
+      <mat-select [(ngModel)]="selectedReason">
+        <mat-option value="" disabled>Select a reason</mat-option>
+        <mat-option *ngFor="let reason of reasons" [value]="reason.reasonText">
+          {{ reason.reasonText }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="submitReapply()"
+            [disabled]="!selectedReason || !comment.trim()">
+      Submit
+    </button>
+  </mat-card>
+</div>
